@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= homeContent%></p>
+<% posts.forEach(function(post){ %>
+<h2><%= post.title%></h2>
+<p><%= post.content%></p>
+<% }) %>
+<form action="/compose" method="get">
+  <div class="compose-btn">
+    <button class="btn btn-primary btn-lg" type="submit">Compose</button>
+  </div>
+</form>
+
+<%- include("partials/footer") -%>
